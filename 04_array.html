@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array</title>
+    <!-- Array 중요함! 많이 사용될 거다. -->
+  </head>
+  <body>
+    <h1>Array</h1>
+    <script>
+      let frontLangs = []; // 빈배열
+      frontLangs[0] = "HTML";
+      frontLangs[1] = "CSS";
+      frontLangs[2] = "JavaScript"; // frontLangs라는 배열 안에는 3개의 값이 저장된 것!
+
+      //백엔드 언어 저장
+      let backLangs = ["php", "jsp", "asp"]; // 배열 안에 저장된 값들 하나하나를 원소라고 부름
+
+      document.write(frontLangs);
+      document.write(frontLangs[0]);
+      document.write("<hr>");
+      document.write(backLangs);
+      document.write(backLangs[1]);
+    </script>
+
+    <h2>length</h2>
+    <!-- <p>배열의 값의 길이(갯수)</p> -->
+    <script>
+      console.log(frontLangs);
+      document.write(frontLangs.length);
+    </script>
+
+    <h2>join</h2>
+    <!-- <p>배열의 원소들을 연결하여 하나의 값, 문자열로 만들어준다.</p> -->
+    <script>
+      let frontLangs2 = frontLangs.join("/");
+      document.write(frontLangs2);
+      // 타입 확인하는 방법: typeof
+      console.log(typeof backLangs);
+      console.log(typeof frontLangs, typeof frontLangs2); // object, string
+    </script>
+
+    <h2>reverse</h2>
+    <!-- <p>원소들을 반대로 정렬 / 원본 수정</p> -->
+    <script>
+      let reverseLangs = frontLangs.reverse();
+      document.write(reverseLangs);
+      document.write("<br>");
+      document.write(frontLangs);
+    </script>
+
+    <h2>sort</h2>
+    <p>내림차순, 오름차순 정렬, 알파벳순, 가나다순 / 원본수정</p>
+    <script>
+      let fruits = ["apple", "orange", "mango"];
+      let nums = [10, 50, 20, 40];
+
+      // fruits.sort(); // apple,mango,orange
+      // nums.sort(); // 10,20,40,50
+
+      //역순으로 정렬하기 (오름차순, 내림차순이 아닌 단순히 값들의 순서만 바뀐것)
+      // fruits.sort(function () {
+      //   return -1; // reverse와 같은 효과
+      // });
+      // nums.sort(function () {
+      //   return -1; // reverse와 같은 효과
+      // });
+
+      // fruits.sort(function (a, b) {
+      //   return b - a; // 문자는 정렬 X(순서가 바뀌지 않는다.)
+      // });
+
+      fruits.sort(); // apple, mango, orange 알파벳 순으로 정렬 후 reverse로 뒤집기!
+      fruits.reverse(); // orange, mango, apple 문자 내림차순 완성!!!
+
+      nums.sort(function (a, b) {
+        return b - a; // 내림차순
+      });
+
+      document.write(fruits); // 알파벳 오름차순
+      document.write("<br>");
+      document.write(nums); // 숫자 오름차순
+    </script>
+  </body>
+</html>

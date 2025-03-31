@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Object</title>
+  </head>
+  <body>
+    <script>
+      // 익명함수의 형태
+      /*var total = function () {
+        let sum = this.kor + this.eng + this.math; // this == s1
+        return sum;
+      };*/
+
+      // <전형적인 객체 구조> 
+      let s1 = {
+        kor: 100, //kor(프로퍼티)에 값 100을 저장 !
+        eng: 100, // 이름(키) : 값
+        math: 80,
+        // 익명함수의 형태와 똑같다.
+        total: function () {
+          let sum = this.kor + this.eng + this.math; // this == s1
+          return sum;
+        },
+      };
+
+    //   document.write(s1.total) // 식자체가 출력된다.
+      document.write(s1.total()) // 280 출력 (total은 단순히 값을 저장하고 있는 일반적인 변수(프로퍼티)가 아니다.)
+      // 함수를 저장하고있다. 그래서 ()를 붙여서 호출해야함.
+    </script>
+  </body>
+</html>
