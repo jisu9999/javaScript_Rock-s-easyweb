@@ -19,10 +19,122 @@
     <script>
       let a = 10;
       let b = 20;
-      if (a < b) {
-        document.write("a가 보다 작다.");
+      // 0 false, 1 true
+      if (a > b) {
+        document.write("a가 b보다 크다.");
+      } else {
+        document.write("a가 b보다 작거나 같다.");
       }
     </script>
-    <h3>확인합니다!!</h3>
+    <hr />
+    <script>
+      let aa = 20;
+      let bb = 20;
+      if (aa > bb) {
+        document.write("aa가 bb보다 크다.");
+      } else if (aa == bb) {
+        document.write("aa가 bb와 같다.");
+      } else {
+        document.write("aa가 bb보다 작다.");
+      }
+    </script>
+    <hr />
+    <h2>타입 비교</h2>
+    <script>
+      if (1 != "1") {
+        document.write("두 값은 다르다");
+      } else {
+        document.write("두 값은 같다");
+      }
+
+      //typeof(값) string, number, object
+      if (2 !== "2") {
+        // 타입까지 비교한다.
+        document.write("두 값은 다르다");
+      } else {
+        document.write("두 값은 같다");
+      }
+      console.log(typeof 2, typeof "2");
+    </script>
+    <hr />
+    <h2>중첩 조건문</h2>
+    <p>조건문 안에 조건문</p>
+    <script>
+      if (a != b) {
+        if (a > b) {
+          document.write("a가 b보다 크다.");
+        } else {
+          document.write("a가 b보다 작다.");
+        }
+      } else {
+        document.write("a가 b와 같다.");
+      } // a가 b보다 작다. 출력!!
+    </script>
+    <h2>조건문의 축약</h2>
+    <script>
+      // 기본 구조
+      // if (a > b) {
+      //   document.write("a가 b보다 크다.");
+      // } else {
+      //   document.write("a가 b보다 작거나 같다.");
+      // }
+      // 중괄호 생략
+      if (a > b) document.write("a가 b보다 크다.");
+      else document.write("a가 b보다 작거나 같다.");
+      // if, else 생략
+      a > b ? document.write("a가 b보다 크다.") : document.write("a가 b보다 작거나 같다.");
+
+      // a > b ?
+      // document.write("a가 b보다 크다."); // else까지 모두 기술해야 한다.
+    </script>
+    <h2>논리연산자</h2>
+    <script>
+      let c = 30;
+      if (a < b && b < c) {
+        document.write("a가 b보다 작고, b가 c보다 작다.");
+      } else {
+        document.write("a가 b보다 크거나, b가 c보다 크거나 같다.");
+      }
+      document.write("<hr>");
+      if (a < b || b > c) {
+        document.write("a가 b보다 작고, b가 c보다 작다.");
+      } else {
+        document.write("a가 b보다 크거나, b가 c보다 크거나 같다.");
+      }
+    </script>
+
+    <h2>switch</h2>
+    <pre>
+      switch(조건){
+        case 1: 
+            할 일;
+            break;
+        case 2:
+            할 일;
+            break;
+        case 3:
+            할 일;
+            break;
+        default:
+            할 일;
+            break;
+      }
+    </pre>
+    <script>
+      let number = prompt("숫자를 입력해주세요.", "0");
+      console.log(number);
+
+      switch (number % 2) {
+        case 0:
+          alert("입력하신 숫자는 짝수입니다.");
+          break;
+        case 1:
+          alert("입력하신 숫자는 홀수입니다.");
+          break;
+        default:
+          alert("숫자가 아닙니다.");
+          break;
+      }
+    </script>
   </body>
 </html>

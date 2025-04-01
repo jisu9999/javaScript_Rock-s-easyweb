@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loop</title>
+  </head>
+  <body>
+    <h1>Loop</h1>
+    <script>
+      let i = 0;
+      document.write(i + "<br>");
+      i = i + 2;
+      document.write(i + "<br>");
+      i = i + 2;
+      document.write(i + "<br>");
+      i = i + 2;
+      document.write(i + "<br>");
+      i = i + 2;
+      document.write(i + "<br>");
+      i = i + 2; // i+=2;
+      document.write(i + "<br>");
+    </script>
+    <hr />
+    <h2>for 반복문</h2>
+    <pre>
+        for(초기문; 조건문; 증감문){
+            //반복할 구문
+        }
+    </pre>
+    <script>
+      for (let i = 0; i <= 10; i += 2) {
+        document.write(i + "<br>");
+      }
+    </script>
+    <h2>while 반복문</h2>
+    <pre>
+        초기문;
+        while(조건문){
+            // 반복될 구문
+            증감문;
+        }
+    </pre>
+  </body>
+</html>
