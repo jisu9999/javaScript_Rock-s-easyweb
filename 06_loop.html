@@ -41,5 +41,72 @@
             증감문;
         }
     </pre>
+    <script>
+      let x = 0;
+      while (x <= 10) {
+        document.write(x + "<br>");
+        x += 2;
+      }
+    </script>
+    <h2>do while 반복문</h2>
+    <pre>
+      초기문;
+      do{
+        // 반복될 구문
+        증감문;
+      } while(조건문);
+    </pre>
+    <script>
+      let y = 0;
+      do {
+        document.write(y + "<br>");
+        y += 2;
+      } while (y <= 10);
+    </script>
+    <h2>forEach 반복문</h2>
+    <pre>
+      대상 - 배열
+      대상.forEach(function(각원소를 대변할 매개변수, 각원소의 인덱스, 전체원소){
+           //반복할 일
+      });
+    </pre>
+    <script>
+      let arr = ["a", "b", "c", "d", "e"];
+      arr.forEach(function (item, index, all) {
+        document.write(item + "는 전체 배열" + all + "에서" + index + "번째 입니다.<br>");
+      });
+    </script>
+    <h2>for in 반복문</h2>
+    <p>객체에서만 쓸 수 있음! 객체의 값에서 반복문 출력</p>
+    <pre>
+      for(각 프로퍼티 변수 in 객체명){
+          반복할 일;
+      }
+    </pre>
+    <script>
+      // 객체 = 변수 + 함수
+      let student = {
+        eng: 80,
+        kor: 100,
+        math: 95,
+      };
+      console.log(student.eng);
+
+      for (item in student) {
+        document.write(item + ":" + student[item] + "<br>");
+      }
+    </script>
+    <h2>for of 반복문</h2>
+    <p>배열에서 사용할 수 있는 반복문(forEach랑 비슷) <br />배열의 값 반복문</p>
+    <pre>
+      for(각원소의 변수명 of 배열명){
+          반복할 일
+      }
+    </pre>
+    <script>
+      for (item of arr) {
+        document.write(item + "<br>");
+      }
+    </script>
   </body>
 </html>
