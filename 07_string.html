@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>String</title>
+  </head>
+  <body>
+    <h1>String</h1>
+    <h2>charAt</h2>
+    <p>문자열에서 인덱스번호에 해당하는 문자열 출력</p>
+    <script>
+      let str = "Hello World"; // 0부터 시작, 공백도 포함
+      document.write(str.charAt(6)); // w출력
+    </script>
+    <!-- 문자열에서 내가 원하는 문자가 몇번째 있는지 출력(두개가 같다.)-->
+    <!-- 원본에서 내가 원하는 문자열이 있는지 없는지 확인할 때 -->
+    <h2>IndexOf, Search</h2>
+    <script>
+      document.write(str.indexOf("World")); // 6출력
+      document.write(str.indexOf("Worlds")); // -1출력
+      document.write(str.search("World")); // 6출력
+    </script>
+    <ul>
+      <li><a href="about.html">about</a></li>
+      <li><a href="home.html">home</a></li>
+      <li><a href="works.html">works</a></li>
+    </ul>
+    <h2>concat</h2>
+    <p>문자열을 합친다.(병합)</p>
+    <script>
+      let str2 = "welcome universe";
+      let str3 = str.concat("<br>" + str2);
+      document.write(str3);
+    </script>
+  </body>
+</html>
